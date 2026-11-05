@@ -20,5 +20,14 @@
     "audio": false,
     "bytes": 4892526,
     "sha256": "1ad831e09d8f3cb8d301dae5b6aba8c001f6e0e31427f99e5a9b3b9b889e3112"
+  },
+  "mobile_derivative": {
+    "file": "public/media/woodworking-mobile.mp4",
+    "width": 960,
+    "height": 540,
+    "duration_seconds": 8,
+    "audio": false,
+    "bytes": 415181,
+    "sha256": "6315a211847755291d8d4d1f07a3051f913aba727eff9d5e1725e5ab724961e9"
   }
 }

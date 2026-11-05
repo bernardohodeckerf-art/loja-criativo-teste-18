@@ -1,51 +1,68 @@
-# LJB — desenvolvimento
+# LJB — Compensados, Ferragens e Acessórios
 
-Base Next.js, TypeScript e Tailwind CSS. Node 24 e npm.
+Site Next.js, TypeScript e Tailwind CSS com catálogo ilustrado, questionário de projeto, hero em vídeo, animações e componentes shadcn/ui. Node 24 e npm.
 
-## Executar
+## Desenvolvimento e validação
 
-`npm ci`
-`npm run dev -- --hostname 0.0.0.0`
+```sh
+npm ci
+npm run dev -- --hostname 0.0.0.0
+npm run lint
+npm run build
+npm start -- --hostname 0.0.0.0
+```
 
-## Verificar
+O build usa Webpack porque o Turbopack apresentou falha de abertura de porta interna neste ambiente. No desenvolvimento, prefira `localhost` no navegador; a versão instalada restringe origens de recursos HMR.
 
-`npm run lint`
-`npm run build`
-`npm start -- --hostname 0.0.0.0`
+## Funcionalidades
 
-Catálogo com 14 produtos, filtros e consulta em dialog nativo com Escape e foco modal. Lenis respeita movimento reduzido. Dados revisáveis em src/app/company.ts. Telefone, WhatsApp e horários não informados.
+- Catálogo com 14 famílias de produtos, filtros e fotos reais otimizadas em WebP. Todas as imagens são ilustrativas: não afirmam modelos exatos, estoque ou especificações. Compensado naval usa foto ilustrativa de compensado, sem certificar a classe naval.
+- Ampliação acessível com dialog nativo, Escape, botão de fechamento, foco devolvido ao acionador e atribuição da foto.
+- Questionário em quatro etapas: projeto, produtos, detalhes e resumo. Adicionar produto no catálogo inclui o item na lista. Permite revisar, copiar e baixar o resumo. Não transmite dados nem pedidos; respostas ficam no estado da página e não sobrevivem ao recarregamento. Nenhum contato comercial foi inventado.
+- Layout em 360 px, tablet e desktop, menu móvel e proporções de mídia preservadas.
+- Hero cinematográfico com entradas GSAP, camadas com perspectiva, iluminação e flutuação. Carrossel em leque com fotos, setas, gestos e alternativa estática. Cards e logos têm efeitos visuais CSS de profundidade; **não são modelos geométricos WebGL**.
+- Controle global de animações e respeito a prefers-reduced-motion. Movimento reduzido não baixa vídeo. Lenis, GSAP e Framer Motion têm limpeza dos efeitos ao desativar as animações.
 
-## Vídeo do hero — origem e licença
+## Componentes enviados pelo usuário
+
+Cinco anexos eram cópias idênticas do mesmo CinematicHero, confirmadas por SHA-256. O outro trazia o Card Fan Carousel. Foram integradas versões adaptadas em `src/components/ui/cinematic-landing-hero.tsx` e `src/components/ui/card-fan-carousel.tsx`.
+
+O hero foi adaptado para a identidade LJB e o vídeo existente, sem mockup de aplicativo, textos de recuperação pessoal ou lojas de apps do exemplo. Evita pin de rolagem de 7.000 px. A galeria usa fotos de produtos em vez de paisagens de demonstração. Ambos respeitam pausa global e movimento reduzido.
+
+A estrutura shadcn está configurada em `components.json`, com alias `@/components/ui` para `src/components/ui`, estilos em `src/app/globals.css` e utilitário `src/lib/utils.ts`. O botão shadcn é usado no questionário. GSAP foi instalado como dependência dos componentes enviados.
+
+## Fotos: autoria e licença
+
+As 14 fotos foram obtidas no Wikimedia Commons. Fontes originais, autores, dimensões, licença e descrição da conversão constam de `public/products/credits.json`. A página `/creditos` e a ampliação de cada foto exibem a atribuição e os links de licença. Arquivos com CC BY-SA mantêm suas respectivas licenças nas versões convertidas; a licença da foto não se estende automaticamente ao restante do projeto.
+
+Derivados WebP têm no máximo 1.000 px de largura, sem ampliação artificial. Originais foram preservados fora do checkout em `/workspace/media-originals/products`; podem ser recuperados pelas URLs de origem no manifesto. Nem todas as fontes oferecem resolução próxima a 4K. Nenhuma fotografia é apresentada como modelo específico disponível em estoque.
+
+## Vídeo do hero
 
 - Autor: **Tima Miroshnichenko**.
 - Título: *A Wood Worker is Putting Wood Putty on the Block of Wood*.
-- Página original: https://www.pexels.com/video/a-wood-worker-is-putting-wood-putty-on-the-block-of-wood-6789582/
-- Arquivo original: https://videos.pexels.com/video-files/6789582/6789582-uhd_3840_2160_25fps.mp4
-- Licença Pexels: https://www.pexels.com/license/ — permite uso comercial e edição, sem atribuição obrigatória; respeitar restrições sobre endosso, revenda e redistribuição. Consultada em 05/11/2026.
-- Material de banco ilustrativo de marcenaria; não representa instalações nem funcionários da LJB.
-- Original oferecido pelo Pexels em 3840 × 2160; ffprobe confirmou H.264, 25 fps, 30,44 s e 50.642.222 bytes. Não houve ampliação nesta implementação. A dimensão do arquivo e os dados da fonte não são uma auditoria independente do processo de captação.
-- Derivado local: `public/media/woodworking-4k.mp4`, 3840 × 2160, 8 s, sem faixa de áudio, 4.892.526 bytes (~4,9 MB), H.264. Capa WebP extraída do mesmo vídeo, 1600 × 900.
-- Créditos, URLs e SHA-256 em `public/media/credits.json`. Original preservado fora do checkout em `/workspace/media-originals/pexels-6789582-original.mp4`.
+- Página: https://www.pexels.com/video/a-wood-worker-is-putting-wood-putty-on-the-block-of-wood-6789582/
+- Original: https://videos.pexels.com/video-files/6789582/6789582-uhd_3840_2160_25fps.mp4
+- Licença: https://www.pexels.com/license/ — uso comercial e edição permitidos, respeitadas as restrições da licença. Consultada em 05/11/2026.
+- Vídeo de banco ilustrativo: não representa instalações ou funcionários da LJB.
+- Original oferecido pela fonte em 3840 × 2160, confirmado por ffprobe: H.264, 25 fps, 30,44 s, 50.642.222 bytes. Não houve upscale nesta implementação; dimensões e dados da fonte não constituem auditoria independente da captação.
+- Desktop/tablet a partir de 768 px: `public/media/woodworking-4k.mp4`, 3840 × 2160, 8 s, sem áudio, 4.892.526 bytes (~4,9 MB).
+- Celular abaixo de 768 px: `public/media/woodworking-mobile.mp4`, 960 × 540, mesmo trecho e sem áudio, cerca de 408 KB. O MP4 4K não é requisitado no celular. O enquadramento horizontal aparece acima do texto, com proporção 16:9 preservada.
+- Autoplay, muted, loop, playsInline, botão de pausa e capa WebP em caso de falha. Movimento reduzido ou pausa global remove o vídeo e mantém a imagem estática.
+- Créditos e SHA-256 do original/derivado 4K em `public/media/credits.json`. Original fora do checkout em `/workspace/media-originals/pexels-6789582-original.mp4`.
 
-Reprodução automática, sem áudio, em loop e inline. Capa permanece atrás do vídeo e substitui a reprodução quando houver falha. Botão acessível permite pausar. Em telas abaixo de 768 px ou movimento reduzido o elemento de vídeo e sua URL não são montados, evitando download do MP4. Alterações dessas preferências removem o vídeo. Framer Motion aplica zoom discreto na rolagem integrada ao Lenis; a composição completa ZoomParallax com fotografias continua pendente.
+## Marcas
 
-Para reproduzir a compressão, com ffmpeg instalado:
+Rometal, FGV, Soprano e Lumitek: arquivos obtidos nos respectivos sites oficiais. A referência FGV enviada pelo usuário corresponde à marca Formenti e Giovenzana; o nome exibido é FGV. Vonder: versão equivalente ao desenho de referência, obtida no catálogo Logo Download. Fontes registradas em `public/brands/credits.json`. Logotipos são marcas de seus titulares, não imagens com licença aberta. Uso identificativo das marcas informadas pelo usuário, sem afirmação de patrocínio.
 
-```sh
-ffmpeg -ss 4 -i original.mp4 -t 8 -an -c:v libx264 -preset fast -crf 28 -pix_fmt yuv420p -movflags +faststart -threads 2 public/media/woodworking-4k.mp4
-ffmpeg -ss 4 -i original.mp4 -frames:v 1 -vf scale=1600:-1 -quality 82 public/media/woodworking-poster.webp
-```
+**Alternativa permanece em texto.** Os anexos de imagem exibidos no chat não ficaram disponíveis como arquivos no executor. O site pesquisado para Alternativa Ferragens respondeu 503; outra empresa encontrada tinha identidade diferente da referência vermelha enviada e não foi usada. Para incorporar a imagem exata, disponibilizar o arquivo PNG/JPG/SVG de Alternativa. Não foi gerada nem redesenhada uma marca substituta.
 
-## Demais pendências
+A logo oficial LJB em 3D também continua pendente de arquivo de referência original. A grafia "Blumm" permanece em `src/app/company.ts` conforme o briefing; não foi alterada automaticamente. Telefone, WhatsApp e horários não foram informados.
 
-Logo oficial não recebida; não há modelo 3D, fotografias de produtos ou logotipos oficiais. O nome LJB e fabricantes permanecem em texto provisório. FGVTN requer confirmação de identidade visual; Blumm preserva a grafia do briefing. Não há preços, especificações, estoque ou contatos inventados. shadcn/ui ainda não foi inicializado. A implementação completa das demais partes do briefing continua pendente. O envio ao GitHub foi solicitado pelo usuário. Nenhuma publicação do site foi executada.
+## Validação em 05/11/2026
 
-## Validação do vídeo (05/11/2026)
+ESLint e build de produção com TypeScript passaram. Chromium de produção: reprodução do vídeo móvel em 360 px e 4K em 768/1440 px; nenhum MP4 com movimento reduzido. Fluxo móvel completo do questionário, conteúdo do resumo, download da lista, menu, filtros, ampliação e Escape passaram. Os quatro tamanhos/cenários não apresentaram erros de JavaScript nem rolagem horizontal. Safari/iOS e aparelhos físicos não foram testados.
 
-- ESLint e build de produção com TypeScript: passaram.
-- ffprobe: derivado 3840 × 2160, 8 s, apenas stream de vídeo; ffmpeg decodificou o trecho completo sem erro.
-- Chromium em produção, desktop 1440 px: dimensões reais de reprodução 3840 × 2160, tempo avançando, pausa e retomada verificadas.
-- Chromium em 360 px e desktop com movimento reduzido: nenhum elemento video e nenhuma requisição MP4.
-- Falha de rede do MP4 simulada: vídeo removido e capa preservada.
-- Sem erros de JavaScript ou rolagem horizontal nos quatro cenários. Screenshot desktop inspecionado para leitura do título e CTAs.
-- Safari/iOS, outros navegadores e aparelhos físicos não foram testados.
+Esta alteração não publica o site. A logo Alternativa e o modelo 3D oficial LJB continuam pendentes conforme descrito acima.
+
+Validação complementar da versão final: 14 fotografias e cinco logotipos carregaram e foram decodificados no Chromium; setas do carrossel, pausa/retomada global, página de créditos e capa após falha de rede passaram. A configuração PostCSS oficial do Tailwind foi adicionada para gerar corretamente as classes no build Webpack. Lint final sem avisos.
