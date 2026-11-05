@@ -33,7 +33,7 @@ A estrutura shadcn está configurada em `components.json`, com alias `@/componen
 
 ## Fotos: autoria e licença
 
-As 14 fotos foram obtidas no Wikimedia Commons. Fontes originais, autores, dimensões, licença e descrição da conversão constam de `public/products/credits.json`. A página `/creditos` e a ampliação de cada foto exibem a atribuição e os links de licença. Arquivos com CC BY-SA mantêm suas respectivas licenças nas versões convertidas; a licença da foto não se estende automaticamente ao restante do projeto.
+As 14 fotos foram obtidas no Wikimedia Commons. Sete imagens adicionais de dobradiças, corrediças e perfil de LED foram fornecidas pelo usuário no ZIP WhatsApp Unknown 2026-11-05 at 20.54.22.zip; seus créditos informam a origem fornecida e não alegam licença aberta. Fontes originais, autores, dimensões, licença e descrição da conversão constam de `public/products/credits.json`. A página `/creditos` e a ampliação de cada foto exibem a atribuição e os links de licença. Arquivos com CC BY-SA mantêm suas respectivas licenças nas versões convertidas; a licença da foto não se estende automaticamente ao restante do projeto.
 
 Derivados WebP têm no máximo 1.000 px de largura, sem ampliação artificial. Originais foram preservados fora do checkout em `/workspace/media-originals/products`; podem ser recuperados pelas URLs de origem no manifesto. Nem todas as fontes oferecem resolução próxima a 4K. Nenhuma fotografia é apresentada como modelo específico disponível em estoque.
 
@@ -57,7 +57,7 @@ Rometal, FGV, Soprano e Lumitek: arquivos obtidos nos respectivos sites oficiais
 
 **Alternativa permanece em texto.** Os anexos de imagem exibidos no chat não ficaram disponíveis como arquivos no executor. O site pesquisado para Alternativa Ferragens respondeu 503; outra empresa encontrada tinha identidade diferente da referência vermelha enviada e não foi usada. Para incorporar a imagem exata, disponibilizar o arquivo PNG/JPG/SVG de Alternativa. Não foi gerada nem redesenhada uma marca substituta.
 
-A logo oficial LJB em 3D também continua pendente de arquivo de referência original. A grafia "Blumm" permanece em `src/app/company.ts` conforme o briefing; não foi alterada automaticamente. Telefone, WhatsApp e horários não foram informados.
+A logo oficial LJB em 3D também continua pendente de arquivo de referência original. A grafia "Blumm" permanece em `src/app/company.ts` conforme o briefing; não foi alterada automaticamente. WhatsApp informado: (47) 3339-6152, link internacional 554733396152. Telefone para chamadas e horários não foram informados.
 
 ## Validação em 05/11/2026
 
@@ -66,3 +66,7 @@ ESLint e build de produção com TypeScript passaram. Chromium de produção: re
 Esta alteração não publica o site. A logo Alternativa e o modelo 3D oficial LJB continuam pendentes conforme descrito acima.
 
 Validação complementar da versão final: 14 fotografias e cinco logotipos carregaram e foram decodificados no Chromium; setas do carrossel, pausa/retomada global, página de créditos e capa após falha de rede passaram. A configuração PostCSS oficial do Tailwind foi adicionada para gerar corretamente as classes no build Webpack. Lint final sem avisos.
+
+## Atualização: WhatsApp e imagens fornecidas
+
+WhatsApp centralizado em `src/app/company.ts`: (47) 3339-6152, `https://wa.me/554733396152`. O questionário oferece abrir o WhatsApp com o resumo preenchido; o visitante revisa e envia a mensagem no próprio WhatsApp. O site não dispara mensagens automaticamente. As sete fotos do ZIP foram convertidas para WebP sem ampliação e incorporadas às galerias de dobradiças (3), corrediças (3) e perfis de LED (1). Não foram inferidos preços, medidas, disponibilidade ou modelos comerciais a partir das imagens.

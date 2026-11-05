@@ -16,3 +16,10 @@ export const products = [
  {id:"ledstrip",name:"Fitas de LED",category:4,description:"Luz para valorizar os seus ambientes."},
 ];
 export type Product = (typeof products)[number];
+
+const suppliedPhotos: Record<string, string[]> = {
+ hinge: ['/products/supplied/hinge-1.webp','/products/supplied/hinge-2.webp','/products/supplied/hinge-3.webp'],
+ slide: ['/products/supplied/slide-1.webp','/products/supplied/slide-2.webp','/products/supplied/slide-3.webp'],
+ ledprofile: ['/products/supplied/ledprofile-1.webp'],
+};
+export function productPhotos(id: string) { return suppliedPhotos[id] || [`/products/${id}.webp`]; }
