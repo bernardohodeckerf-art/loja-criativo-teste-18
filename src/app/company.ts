@@ -1,0 +1,1 @@
+export const company = { name: "LJB Compensados, Ferragens e Acessórios para Móveis", authorizedBrand: "Blumm", phone: "", whatsapp: "", hours: "", social: "", address: "Rua Francisco Vahldieck, 3814 — Fortaleza Alta — Blumenau/SC" };
