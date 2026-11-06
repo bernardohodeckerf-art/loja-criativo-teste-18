@@ -24,5 +24,17 @@
     "url": "https://logodownload.org/vonder-logo/",
     "asset": "https://logodownload.org/wp-content/uploads/2020/11/vonder-logo-0.png",
     "rights": "Marca registrada Vonder. Arquivo equivalente à referência enviada pelo usuário, obtido em catálogo de logos; uso identificativo, sem licença aberta e sem afirmação de patrocínio. Margens transparentes aparadas e arquivo convertido para WebP."
+  },
+  {
+    "name": "Blum (identificada no catálogo como Blumm conforme configuração do usuário)",
+    "url": "https://www.blum.com/br/pt/",
+    "asset": "https://www.blum.com/corporate/layout/facelift/images/ci/logo.svg.svg",
+    "rights": "Logo original da marca, uso identificativo a pedido do usuário. Não é licença aberta."
+  },
+  {
+    "name": "LJB — versão renderizada em 3D",
+    "asset": "/brands/ljb-3d.webp",
+    "source": "Referência visual LJB fornecida pelo usuário no chat",
+    "rights": "Versão renderizada por IA a pedido do usuário, baseada na marca de sua empresa. Preserva os elementos principais; não é o arquivo vetorial original nem um modelo WebGL."
   }
 ]
