@@ -16,7 +16,9 @@ export const products = [
 export type Product = (typeof products)[number];
 
 const suppliedPhotos: Record<string, string[]> = {
- rail: ['/products/cabide-interno-pending.svg'],
+ rail: ['/products/supplied/rail-1.webp'],
+ cutlery: ['/products/supplied/cutlery-1.webp'],
+ aluminium: ['/products/supplied/aluminium-1.webp'],
  hinge: ['/products/supplied/hinge-1.webp','/products/supplied/hinge-2.webp','/products/supplied/hinge-3.webp'],
  slide: ['/products/supplied/slide-1.webp','/products/supplied/slide-2.webp','/products/supplied/slide-3.webp'],
  ledprofile: ['/products/supplied/ledprofile-1.webp'],

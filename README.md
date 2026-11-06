@@ -2,7 +2,7 @@
 
 Madeira/compensado naval e fórmica foram retirados da oferta, filtros, questionário e galeria. A apresentação agora usa "Ferragens e Acessórios", e "Madeiras e revestimentos" foi renomeada para "Acabamentos e colagem". São 12 famílias de produtos ativas. Alternativa foi substituída por Blumm, usando a logo original Blum do site oficial, com a grafia configurável preservada conforme solicitação. "Cabideiros" foi corrigido para "Cabide interno", e a foto genérica anterior de arara foi retirada.
 
-As novas fotos de perfil de alumínio, divisor de talheres e cabide interno foram exibidas no chat, mas não chegaram ao executor como arquivos. Essas três substituições dependem do envio dos arquivos em ZIP. O cabide interno usa indicação de foto em atualização enquanto aguarda o arquivo correto; não reutiliza a foto incorreta de arara. As demais fotos anteriores foram preservadas.
+As fotos corretas de perfil de alumínio, divisor de talheres e cabide interno foram recebidas no ZIP `WhatsApp Image 2026-11-05 at 21.21.51.zip` e aplicadas ao catálogo, carrossel e ampliação. A indicação de foto em atualização foi removida. As imagens foram convertidas para WebP sem ampliação e com proporções preservadas, e a origem foi registrada nos créditos. O ZIP com sete fotos era repetido; o template de hamburgueria também enviado não foi integrado por não pertencer ao pedido do site LJB.
 
 A marca LJB recebeu uma versão renderizada em 3D por IA baseada na referência fornecida, com letras azuis, linhas horizontais e contorno oval avermelhado e preto. Não é um modelo WebGL nem se afirma identidade pixel a pixel com o original. A versão original em arquivo ainda não foi disponibilizada no executor.
 

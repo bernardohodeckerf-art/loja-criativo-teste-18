@@ -271,5 +271,44 @@
     "license_url": "",
     "local": "/products/supplied/ledprofile-1.webp",
     "changes": "Convertida para WebP, sem ampliação. Imagem ilustrativa; modelo e disponibilidade sujeitos a consulta."
+  },
+  {
+    "id": "cutlery-supplied",
+    "title": "WhatsApp Image 2026-11-05 at 21.21.51.jpeg",
+    "source": "",
+    "original": "ZIP WhatsApp Image 2026-11-05 at 21.21.51.zip, fornecido pelo usuário",
+    "width": 600,
+    "height": 600,
+    "author": "Autoria não informada; imagem fornecida pelo usuário",
+    "license": "Direitos dos respectivos titulares; não foi informada licença aberta",
+    "license_url": "",
+    "local": "/products/supplied/cutlery-1.webp",
+    "changes": "Convertida para WebP sem ampliação; proporções preservadas. Produto ilustrativo, sujeito a consulta."
+  },
+  {
+    "id": "rail-supplied",
+    "title": "WhatsApp Image 2026-11-05 at 21.22.33.jpeg",
+    "source": "",
+    "original": "ZIP WhatsApp Image 2026-11-05 at 21.21.51.zip, fornecido pelo usuário",
+    "width": 1600,
+    "height": 900,
+    "author": "Autoria não informada; imagem fornecida pelo usuário",
+    "license": "Direitos dos respectivos titulares; não foi informada licença aberta",
+    "license_url": "",
+    "local": "/products/supplied/rail-1.webp",
+    "changes": "Convertida para WebP sem ampliação; proporções preservadas. Produto ilustrativo, sujeito a consulta."
+  },
+  {
+    "id": "aluminium-supplied",
+    "title": "WhatsApp Image 2026-11-05 at 21.21.38.jpeg",
+    "source": "",
+    "original": "ZIP WhatsApp Image 2026-11-05 at 21.21.51.zip, fornecido pelo usuário",
+    "width": 1320,
+    "height": 1278,
+    "author": "Autoria não informada; imagem fornecida pelo usuário",
+    "license": "Direitos dos respectivos titulares; não foi informada licença aberta",
+    "license_url": "",
+    "local": "/products/supplied/aluminium-1.webp",
+    "changes": "Convertida para WebP sem ampliação; proporções preservadas. Produto ilustrativo, sujeito a consulta."
   }
 ]
